@@ -1,15 +1,31 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'Bariol';
-    src: url('source/fonts/Bariol_Regular.otf');
+    font-family: 'DM';
+    src: url('source/fonts/DMSans_24pt-Regular.ttf');
+}
+
+:root {
+    --cor1: #323159;
+    --cor2: #f2ebd5;
+    --cor3: #bfb6aa;
+    --cor4: #8c8380;
+    --cor5: #0d0d0d;
+
+    --texto: 'DM', Arial, Helvetica, sans-serif;
+    
 }
 
 * {
-    font-family: 'Bariol', Arial, Helvetica, sans-serif;
+    font-family: var(--texto);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body {
+    background-color: var(--cor2);
+    color: var(--cor5);
 }
 
 header {
@@ -17,15 +33,145 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 10px 20px;
+    padding: 10px 30px;
+    
+}
+
+#logo {
+    color: var(--cor1);
 }
 
 #nav_list {
     display: flex;
     gap: 30px;
     list-style: none;
+    
 }
 
 .nav_link {
     text-decoration: none;
+    color: var(--cor1);
+}
+
+#buy_button {
+    text-decoration: none;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    
+    border: none;
+    border-radius: 15px;
+
+    padding: 10px;
+    
+}
+
+main {
+    padding: 0px 30px;
+}
+
+#shape {
+    position: absolute;
+    
+    top: 90px;
+    left: 880px;
+    background-image: radial-gradient(#241a80, var(--cor1));
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    height: 450px;
+    width: 450px;
+    border-radius: 600px;
+} 
+
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.hero_description {
+    width: 100%;
+    max-width: 380px;
+    padding: 10px;
+    z-index: 2;
+}
+
+#hero_description_1 {
+    text-align: justify;
+}
+
+#hero_title1 {
+    font-size: 4.5em;
+    line-height: 80px;
+    margin-bottom: 10px;
+}
+
+#hero_texto {
+    margin-bottom: 20px;
+}
+
+#ultra {
+    background-image: linear-gradient(to right, var(--cor1), var(--cor4));
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+#buy_now_button {
+    text-decoration: none;
+    background-color: var(--cor1);
+    color: var(--cor2);
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 10px;
+
+    transition-duration: .2s;
+}
+
+#buy_now_button:hover {
+    background-color: #1b145f;
+}
+
+#learn_button {
+    text-decoration: none;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+
+    padding: 10px;
+
+    transition-duration: .2s;
+}
+
+#learn_button:hover {
+    background-color: rgb(119, 119, 111);
+    color: white;
+}
+
+#hero_image {
+    
+    z-index: 2;
+}
+
+#hero_description_2 {
+    
+    color: var(--cor2);
+}
+
+#hero_title2 {
+    margin-bottom: 20px;
+}
+
+#hero_list {
+    list-style-position: inside;
+    
+}
+
+.list_item {
+    margin-bottom: 5px;
 }
